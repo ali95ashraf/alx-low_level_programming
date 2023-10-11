@@ -2,12 +2,8 @@
 
 /**
  * times_table - prints the 9 times table
- * Example Table:
- * 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
- * 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
- * ...
- * 0, 9, 18, 27, 36, 45, 54, 63, 72, 81
- */
+*/
+
 void times_table(void)
 {
 	int num, mult, prod;
