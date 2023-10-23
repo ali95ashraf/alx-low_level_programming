@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 	int cd;
 
 	/* Loop through the string 's' until the null terminator is reached. */
-	for (cd = 0; s[cd] != '\0'; cd++)
+	for (cd = 0; s[cd] >= '\0'; cd++)
 	{
 		/* If the current character matches 'c' */
 		/* return a pointer to it. */
