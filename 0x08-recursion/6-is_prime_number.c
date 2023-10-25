@@ -20,7 +20,19 @@ int is_prime_number(int n)
 {
 	return (check_prime(n, 2));
 }
-
+/**
+ * check_prime - Helper function to check if a number is prime.
+ * @n: The number to be checked.
+ * @othrn: The current divisor to check.
+ *
+ * This function checks if the given number is prime or not by recursively
+ * testing divisibility with increasing divisors.
+ *
+ * @n: The number to be checked for primality.
+ * @othrn: The current divisor being tested.
+ *
+ * Return: 1 if the number is prime, 0 if it's not.
+ */
 int check_prime(int n, int othrn)
 {
 	if (othrn >= n && n > 1)
