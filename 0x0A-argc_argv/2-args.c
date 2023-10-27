@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 
 		while (argc--)
 		{
-			printf("%\n", argv[i]);
+			printf("%s\n", argv[i]);
 			i++;
 		}
 
