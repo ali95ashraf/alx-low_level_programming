@@ -2,7 +2,7 @@
 
 /**
  * main - print name of this source file
- * return: always 0.
+ * Return: always 0.
  */
 
 int main(void)
