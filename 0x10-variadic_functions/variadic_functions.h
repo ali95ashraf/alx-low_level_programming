@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * strct token - struct token
+ * struct token - struct token
  *
  * @token: format token
  * @f: function associated
