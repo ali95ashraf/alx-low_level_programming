@@ -2,8 +2,8 @@
 
 /**
  * _strlen - returns the length of a string
- * @s: the string whose length to check
- * Return: integer length of string
+ * @s: pointer to the string
+ * Return: length of the string
  */
 
 int _strlen(char *s)
@@ -16,11 +16,13 @@ int _strlen(char *s)
 		i++;
 	return (i);
 }
+
 /**
- * print_list - prints a linked list
- * @h: pointer to first node
- * Return: size of list
+ * print_list - prints elements of a linked list
+ * @h: pointer to the first node
+ * Return: number of nodes in the list
  */
+
 size_t print_list(const list_t *h)
 {
 	size_t i = 0;
