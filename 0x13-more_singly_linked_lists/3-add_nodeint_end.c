@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- * Return: pointer to new node
+ * add_nodeint_end - a node to the bottom
+ *
  * @n: value for new node
  * @head: pointer to first node
  *
- * adds a node to the bottom
- * add_nodeint_end
+ * Return: pointer to new node
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
@@ -15,7 +15,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	if (!head || !new_node)
 		return (NULL);
-	
+
 	new_node->next = NULL;
 	new_node->n = n;
 	if (!*head)

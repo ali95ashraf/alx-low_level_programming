@@ -1,11 +1,10 @@
 #include "lists.h"
 
 /**
+ * free_listint - frees a list of ints
  * Return: void
  * @head: pointer to first node
  *
- * frees a list of ints
- * free_listint
  */
 
 void free_listint(listint_t *head)
