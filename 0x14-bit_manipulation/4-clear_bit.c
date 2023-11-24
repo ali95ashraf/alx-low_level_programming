@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * clear_bit - clears the bit at the index @n: the number to index
+ * @n: the number to print
  * @index: the bit to clear
  * Return: 1 if successful, -1 on error
  */
