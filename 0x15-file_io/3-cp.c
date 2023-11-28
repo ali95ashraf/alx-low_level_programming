@@ -38,7 +38,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, ERR_NOCLOSE, from_FileDescriptors),
 			exit(100);
 	if (to_FileDescriptors)
-		dprintf(STDERR_FILENO, ERR_NOCLOSE, from_FileDescriptors),
+		dprintf(STDERR_FILENO, ERR_NOCLOSE, to_FileDescriptors),
 			exit(100);
 	return (EXIT_SUCCESS);
 }
