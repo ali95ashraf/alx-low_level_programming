@@ -1,19 +1,45 @@
-CC=gcc
-CFLAGS=-Wall -Werror -Wextra -pedantic
-SRC=main.c holberton.c
-OBJ=$(SRC:.c=.o)
-NAME=holberton
+# Compiler
+CC := gcc
 
-.PHONY: all clean oclean fclean re
+# Source files
+SRC := $(wildcard *.c)
 
-all: m.h $(OBJ)
-	$(CC) $(SRC) -o $(NAME)
+# Object files
+OBJ := $(SRC:.c=.o)
 
+# Executable name
+NAME := school
+
+# Program to delete files
+RM := /bin/rm -f
+
+# Compiler flags
+CFLAGS := -Wall -Werror -Wextra -pedantic
+
+# Rule to build the executable
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule to clean Emacs and Vim temporary files
 clean:
-	$(RM) $(NAME) *~
+	$(RM) *~ \#*\# $(NAME)
+
+# Rule to clean object files
 oclean:
 	$(RM) $(OBJ)
 
+# Rule to clean Emacs and Vim temporary files, executable, and object files
 fclean: clean oclean
 
-re: oclean all
+# Rule to force recompilation of all source files
+re: fclean all
+
+# Dependency check for each object file
+$(OBJ): $(SRC)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Prevents make from failing if there's a file named as one of the rules
+.PHONY: all clean oclean fclean re
+
