@@ -3,24 +3,14 @@ SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
 NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic
-RM = rm -f
+.PHONY : all clean oclean fclean re
 
-.PHONY: all clean oclean fclean re
-
-all: m.h $(NAME)
-
-$(NAME): $(OBJ)
-    $(CC) $(OBJ) -o $(NAME)
-
-%.o: %.c
-    $(CC) $(CFLAGS) -c $< -o $@
-
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 clean:
-    $(RM) *~ $(NAME) $(OBJ) *#
-    find . -type f -name "*.swp" -delete
-
+	$(RM) *~ $(NAME)
 oclean:
-    $(RM) $(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
